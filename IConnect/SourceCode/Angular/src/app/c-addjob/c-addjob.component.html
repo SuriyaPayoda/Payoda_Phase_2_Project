@@ -1,0 +1,76 @@
+<app-c-nav></app-c-nav>
+
+<div class="background-container">
+    <div class="content-wrapper">
+<br>
+<div class="d-flex" style="justify-content:flex-end;">
+<button type="button" mat-raised-button (click)="openDialog()"class="btn btn-primary bi bi-plus">Add Job</button><br>
+</div>
+<br>
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8 table-width">
+
+    <ng-container matColumnDef="serialNumber">
+        <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+        <mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }} </mat-cell>
+      </ng-container>
+
+
+    <ng-container matColumnDef="jRole">
+      <mat-header-cell *matHeaderCellDef> Job Role </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.jRole }} </mat-cell>
+    </ng-container>
+  
+
+    <ng-container matColumnDef="jSkill">
+      <mat-header-cell *matHeaderCellDef> Job Skill </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{ row.jSkill }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="jVacancy">
+        <mat-header-cell *matHeaderCellDef> Job Vacancy </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{ row.jVacancy }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="jSalary">
+        <mat-header-cell *matHeaderCellDef> Job Salary </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{ row.jSalary }} </mat-cell>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="jContact">
+        <mat-header-cell *matHeaderCellDef> Job Contact </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{ row.jContact }} </mat-cell>
+      </ng-container>
+      
+      <ng-container matColumnDef="jTimeline">
+        <mat-header-cell *matHeaderCellDef> Job Timeline </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{ row.jTimeline | date:'short' }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="jLocation">
+        <mat-header-cell *matHeaderCellDef> Job Location </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{ row.jLocation }} </mat-cell>
+      </ng-container>
+
+      
+    
+  
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button class="bi bi-edit btn btn-light buttons" style="background-color: white; border-color: rgba(85, 117, 120, 0.775);"
+                  (click)="editJob(row)">
+            <mat-icon>edit</mat-icon>
+          </button>&nbsp;
+          <button class="bi bi-edit btn btn-light buttons" style="background-color: white; border-color: rgba(85, 117, 120, 0.775);"
+                  (click)="deleteJob(row)">
+                  <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  </div>
+  </div>

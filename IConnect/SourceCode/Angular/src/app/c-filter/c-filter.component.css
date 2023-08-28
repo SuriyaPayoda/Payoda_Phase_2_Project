@@ -1,0 +1,94 @@
+/* dialog-style.css */
+
+.container {
+    padding: 2rem;
+  }
+  
+  .card {
+    margin-bottom: 1 rem;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-type {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .form-check-inline label {
+    margin-bottom: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  
+  .form-check-inline input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  .slider {
+    width: 100%;
+   
+  }
+  
+  .experience-dropdown {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    appearance: none; /* Remove default appearance */
+    outline: none;
+    transition: border-color 0.3s ease;
+    position: relative;
+  }
+
+  .experience-dropdown:hover,
+  .experience-dropdown:focus {
+    border-color: #333;
+  }
+
+  /* Styling for dropdown arrow */
+  .experience-dropdown::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666;
+  }
+
+  /* Styling for dropdown options */
+  .experience-dropdown option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .checkbox-container {
+    display: inline;
+    flex-direction: column;
+  }
+  
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox:checked {
+    background-color: #007bff;
+  }

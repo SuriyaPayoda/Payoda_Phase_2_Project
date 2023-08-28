@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Edit Job</h2>
+<mat-dialog-content class="dialog-content">
+  <div class="edit-job-form">
+    <form [formGroup]="editJobForm" (ngSubmit)="onUpdateClick()">
+      <mat-form-field>
+        <input matInput placeholder="Role" formControlName="jRole" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Skill" formControlName="jSkill" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Min Experience" formControlName="jMinexperience" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Max Experience" formControlName="jMaxexperience" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Vacancy" formControlName="jVacancy" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Salary" formControlName="jSalary" required>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Highlight" formControlName="jHighlight">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Location" formControlName="jLocation">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Job Type" formControlName="tName">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Contact" formControlName="jContact">
+      </mat-form-field>
+  
+        <input type="date" name="begin" 
+        placeholder="dd-mm-yyyy" value=""
+        min="1997-01-01" max="2030-12-31" formControlName="jTimeline"  >
+
+      <div class="buttons">
+        <button class="btn btn-success" type="submit" color="primary" [disabled]="!editJobForm.valid">Update</button>
+        <button class="btn btn-danger" type="button" (click)="onCancelClick()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+

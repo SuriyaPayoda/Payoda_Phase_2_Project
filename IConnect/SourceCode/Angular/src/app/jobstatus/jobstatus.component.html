@@ -1,0 +1,35 @@
+<app-navuser></app-navuser>
+
+<br>
+<br>
+<div class="job-applications">
+  <mat-table class="mat-elevation-z8 custom-table" [dataSource]="userJobApplications">
+    <ng-container matColumnDef="cName">
+      <mat-header-cell *matHeaderCellDef> Company Name </mat-header-cell>
+      <mat-cell *matCellDef="let application"> {{ application.cName }} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="jRole">
+      <mat-header-cell *matHeaderCellDef> Job Role </mat-header-cell>
+      <mat-cell *matCellDef="let application"> {{ application.jRole }} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="uSkill">
+      <mat-header-cell *matHeaderCellDef> Skill </mat-header-cell>
+      <mat-cell *matCellDef="let application"> {{ application.uSkill }} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="uExperience">
+      <mat-header-cell *matHeaderCellDef> Experience </mat-header-cell>
+      <mat-cell *matCellDef="let application"> {{ application.uExperience }} </mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="jStatus">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let application"> {{ application.jStatus }} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

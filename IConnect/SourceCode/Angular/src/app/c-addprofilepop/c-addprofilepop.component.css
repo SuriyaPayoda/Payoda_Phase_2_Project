@@ -1,0 +1,33 @@
+/* Add this CSS to your component's style file (e.g., c-addprofilepop.component.css) */
+.dialog-content {
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-6 {
+  flex: 0 0 calc(50% - 10px);
+}
+
+.mat-dialog-actions {
+  justify-content: flex-end;
+  margin-top: 20px;
+}

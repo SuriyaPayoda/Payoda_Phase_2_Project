@@ -1,0 +1,72 @@
+/* login.component.css */
+
+.my-component {
+    font-family: 'Inter';
+  }
+body {
+    font-family: 'Inter', sans-serif !important; 
+    margin: 0;
+    padding: 0;
+ 
+    background-color: #d50d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    padding: 20px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form button {
+    width: 25%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #0056b3;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    background-color: #ffffff;
+    color: #333;
+    font-size: 14px;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.center {
+    margin: auto;
+    width: 50%; /* Adjust as needed */
+    height: 50%; /* Adjust as needed */
+    text-align: center; /* Center text within the element */
+}

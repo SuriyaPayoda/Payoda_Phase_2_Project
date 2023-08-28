@@ -1,0 +1,51 @@
+<app-c-nav></app-c-nav>
+
+<div class="background-container">
+  <div class="d-flex justify-content-center align-items-center bg-image-container">
+    <img src="assets/images/cover1.jpg" alt="Background Image" height="600px" width="1500px" class="bg-image" />
+  </div>
+  <mat-card class="custom-card">
+
+    <div class="row">
+      <div class="d-flex justify-content-center align-items-center">
+        <h2>Company Edit</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <img src="assets/images/company.jpg"  style="border: 2px solid black;" alt="Company Logo" class="rounded-circle" width="205px">
+        </div>
+
+        <div class="col-md-4">
+          <div class="mb-3">
+            <label for="companyName" class="form-label">Company Name</label>
+            <input type="text" class="form-control" id="companyName" name="companyName" [value]="company?.cName">
+          </div>
+
+          <div class="mb-3">
+            <label for="companyProfile" class="form-label">Company Profile</label>
+            <input type="file" class="form-control" id="cprofile" name="cprofile" (change)="onFileSelected($event)">
+          </div>
+
+          <div class="mb-3">
+            <label for="companyName" class="form-label">Company Contact Number</label>
+            <input type="text" class="form-control" id="companyName" name="companyName" [value]="company?.cPhno">
+          </div>
+
+          <div class="mb-3">
+            <label for="contactEmail" class="form-label">Contact Email</label>
+            <input type="email" class="form-control" id="contactEmail" name="contactEmail" [value]="company?.cEmail">
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-div d-flex justify-content-end">
+        <button type="reset" class="btn btn-danger">Cancel</button>&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+
+    </div>
+
+  </mat-card>
+  <br>
+

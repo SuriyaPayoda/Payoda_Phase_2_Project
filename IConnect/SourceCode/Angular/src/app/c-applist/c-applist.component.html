@@ -1,0 +1,53 @@
+<app-c-nav></app-c-nav>
+
+<mat-divider></mat-divider>
+<br>
+<br>
+<div class="d-flex flex-column align-items-center">
+  <div class="input-group mb-3" [style.width.px]="searchBoxWidth">
+    <input type="text" class="form-control" placeholder="Search by Seeker Name, Course" (keyup)="applySearch()"
+      [(ngModel)]="searchText">
+    <button type="button" class="btn btn-dark bi-search" (click)="applySearch()"></button>
+    <button type="button" class="btn btn-light" (click)="clearSearch()">Clear</button>
+  </div>
+
+  </div>
+<div>
+  <br>
+</div>
+
+<div class="container" style="height: auto;">
+  <div class="row">
+    <div class="col-md-6" *ngFor="let user of pageSlice; let i = index;">
+      <mat-card class="card modern-card">
+        <div class="row">
+          <div class="col-md-6 card-image-d">
+            <div class="card-wrapper">
+              <img src="assets\images\company.jpg" alt="Card Image" class="card-image img-fluid">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <mat-card-content>
+              <h2>{{ user.uFirstname }} {{ user.uLastname }}</h2>
+              <p>Email: {{ user.uEmail }}</p>
+              <p>Experience: {{ user.uExperience }} years</p>
+              <p>Course: {{ user.uCourse }}</p>
+              <button mat-raised-button (click)="showDetails(user)" class="btn btn-primary">View</button>
+            </mat-card-content>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>
+
+<div class="paginator-container">
+  <mat-paginator
+    [length]="filteredUsers.length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[4, 8, 12]"
+    (page)="OnPageChange($event)"
+  ></mat-paginator>
+</div>

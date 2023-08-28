@@ -1,0 +1,49 @@
+<h2 class="dialog-title d-flex justify-content-center align-items-center">
+  Company Details
+</h2>
+
+<mat-dialog-content class="dialog-content">
+  <br /><br />
+  <div class="row">
+    <div class="col-md-6">
+      <p><strong>Vacancy:</strong> {{ job.jVacancy }}</p>
+      <p><strong>Contact:</strong> {{ job.jContact }}</p>
+      <p><strong>Timeline:</strong> {{ job.jTimeline }}</p>
+      <p><strong>Updated On:</strong> {{ job.jUpdatedon }}</p>
+      <p><strong>Company Name:</strong> {{ job.cName }}</p>
+      <p><strong>Phone Number:</strong> {{ job.cPhno }}</p>
+      <p><strong>Skills:</strong> {{ job.jSkill }}</p>
+    </div>
+    <div class="col-md-6">
+      <p><strong>Location:</strong> {{ job.jLocation }}</p>
+      <p><strong>Job Type:</strong> {{ job.tName }}</p>
+      <p><strong>Salary:</strong> {{ job.jSalary }}</p>
+      <p><strong>Job Highlight:</strong> {{ job.jHighlight }}</p>
+      <p><strong>Minimum Experience:</strong> {{ job.jMinexperience }}</p>
+      <p><strong>Maximum Experience:</strong> {{ job.jMaxexperience }}</p>
+      <p><strong>Contact Email:</strong> {{ job.cEmail }}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+<em><p class="d-flex align-items-center justify-content-center">What Skills and Experience Do you possess?</p></em>
+<div class="input-fields container">
+  
+  <div class="apply-job-section">
+    <h3>Apply for this Job</h3>
+    <div class="input-fields " style="display: flexbox;">
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <br>
+        <input type="text" id="skills" [(ngModel)]="skills" class="form-control" />
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <div class="form-group">
+        <label for="experience">Experience (years):</label>
+        <br>
+        <input type="number" id="experience" [(ngModel)]="experience" class="form-control" />
+      </div>
+    </div>
+    <button class="btn btn-success" (click)="applyJob()">Apply Now</button> &nbsp;&nbsp;
+    <button class="btn btn-danger" >Cancel</button>
+  </div>
+</div>

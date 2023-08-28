@@ -1,0 +1,72 @@
+/* Styles for input fields and columns */
+.input-fields {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.input-column {
+  width: 45%; /* Adjust the width as needed */
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 768px) {
+  .input-fields {
+    flex-direction: column;
+  }
+
+  .input-column {
+    width: 100%;
+  }
+
+}
+
+/* Style for the required symbol */
+.required-symbol {
+  color: red;
+  margin-left: 4px;
+}
+
+
+
+
+
+.dialog-content {
+  display: flex;
+  justify-content:center;
+  border-bottom: 1px solid #ffffff;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size:medium;
+  font-weight: lighter;
+}
+
+.grid-container {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+}
+
+.grid-item {
+  flex: 1;
+  padding: 10px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}

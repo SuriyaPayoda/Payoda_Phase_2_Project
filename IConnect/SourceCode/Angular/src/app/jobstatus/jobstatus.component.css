@@ -1,0 +1,47 @@
+/* Reduce table width */
+.table-container {
+    width: 80%; /* Adjust as needed */
+    margin: auto;
+  }
+  .background-container {
+    background-image: url('src/assets/images/bgblue.jpg'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100vw; /* 100% of viewport width */
+    height: 100vh; /* 100% of viewport height */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    position: fixed; /* Fix the background position */
+    z-index: -1; /* Place behind other content */
+  }
+  
+  /* Style for the content wrapper */
+  .content-wrapper {
+    width: 100%; /* 100% of viewport width */
+    padding: 20px; /* Add padding to center content */
+  }
+  
+  
+  /* Blue theme */
+  .mat-table {
+    background-color: #f2f5f8;
+    border-radius: 5px;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    padding: 10px 16px;
+  }
+  
+  /* Hover effect */
+  .mat-row:hover {
+    background-color: #cce0ff; /* Light blue hover background */
+    cursor: pointer;
+  }
+  
+  .custom-table {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the table horizontally */
+  }
+  

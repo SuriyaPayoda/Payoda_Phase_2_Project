@@ -1,0 +1,59 @@
+<app-navuser></app-navuser>
+<mat-divider></mat-divider> 
+<br>
+<br>
+<div class="d-flex flex-column align-items-center">
+    <div class="input-group mb-3" [style.width.px]="searchBoxWidth">
+      <input type="text" class="form-control" placeholder="Search by Company Name, Job Role, Location" (keyup)="applySearch()" [(ngModel)]="searchText">
+      <button type="button" class="btn btn-dark bi-search" (click)="applySearch()" ></button>
+      <button type="button" class="btn btn-light" (click)="clearSearch()">Clear</button>
+
+    </div>
+
+
+</div>
+<div>
+    <br>
+</div>
+
+  
+<div class="container" style="height: auto;">
+    <div class="row">
+        <div class="col-md-6" *ngFor="let card of pageSlice; let i = index;">
+            <mat-card class="card modern-card">
+                <div class="row">
+                    <div class="col-md-6 card-image-d">
+                        <div class="card-wrapper">
+                            <img src="assets\images\payoda.png" alt="Card Image" class="card-image img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <mat-card-content>
+                            <h2>{{ card.jRole}}</h2>
+                            <p>Company Name: {{ card.cName }}</p>
+                            <p>Location&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{ card.jLocation }}</p>
+                            <p>Job Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{ card.tName }}</p>
+                            <p>Salary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{ card.jSalary}}</p>
+                            <button mat-raised-button (click)="showDetails(card)" class="btn btn-primary">View</button>
+                        </mat-card-content>
+                    </div>
+                </div>
+            </mat-card>
+            
+        </div>
+        
+    </div>
+    <br>
+    <br>
+</div>
+
+
+<div class="paginator-container">
+
+    <mat-paginator
+      [length]="filteredCards.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[4, 8, 12]"
+      (page)="OnPageChange($event)"
+    ></mat-paginator>
+  </div>

@@ -1,0 +1,84 @@
+body{
+    font-family: 'Inter', sans-serif !important;
+    font-family: 'Poppins', sans-serif ;
+    margin: 0;
+    background: linear-gradient(to bottom, hsl(199, 100%, 95%), #c2e0ff);
+}
+
+.paginator-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white; /* Adjust this based on your styling */
+  padding: 5px;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to separate paginator from content */
+}
+
+  .custom-input {
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    width: 50%; /* Fill the available width */
+  }
+  
+
+  .horizontal-line {
+    border: none;
+    border-top: 10px solid #ee0000; /* Adjust the color as needed */
+    margin: 20px 0; /* Adjust the margin as needed */
+  }
+
+  .card-content {
+    display: flex;
+  }
+  
+  .card-image {
+    max-width: 100px; /* Adjust as needed */
+    margin-right: 20px; /* Adjust as needed */
+  }
+  
+  .details {
+    flex-grow: 1;
+  }
+  .modern-card {
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    margin-bottom: 3rem;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .card-header {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    margin-bottom: 0.25rem;
+  }
+
+
+  .card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust this based on your desired height */
+}
