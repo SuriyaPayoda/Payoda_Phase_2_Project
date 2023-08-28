@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\IConnect_Version07.props" />
+</Project>
