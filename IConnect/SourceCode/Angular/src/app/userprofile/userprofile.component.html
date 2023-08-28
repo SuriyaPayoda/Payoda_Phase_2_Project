@@ -1,0 +1,72 @@
+<app-c-nav></app-c-nav>
+
+<div class="background-container">
+  <div class="d-flex justify-content-center align-items-center bg-image-container">
+    <img src="assets/images/cover1.jpg" alt="Background Image" height="800px" width="1500px" class="bg-image" />
+  </div>
+  <mat-card class="custom-card">
+
+    <div class="row">
+      <div class="d-flex justify-content-center align-items-center">
+        <h2>Profile Edit</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">
+          <img src="assets/images/userimage.png" alt="Image" class="rounded-circle">
+        </div>
+        <div class="col-md-5">
+          <div *ngIf="userProfile">
+            <h2>User Profile</h2>
+            <div class="mb-3">
+              <label for="firstName">First Name:</label><br>
+              <input type="text" id="firstName" [(ngModel)]="userProfile.uFirstname" name="uFirstname">
+            </div>
+            <div class="mb-3">
+              <label for="lastName">Last Name:</label><br>
+              <input type="text" id="lastName" [(ngModel)]="userProfile.uLastname" name="uLastname">
+            </div>
+            <div class="mb-3">
+              <label for="email">Email:</label><br>
+              <input type="email" id="email" [(ngModel)]="userProfile.uEmail" name="uEmail">
+            </div>
+            <div class="mb-3">
+              <label for="phoneNumber">Phone Number:</label><br>
+              <input type="tel" id="phoneNumber" [(ngModel)]="userProfile.uPhno" name="uPhno">
+            </div>
+            <div class="mb-3">
+              <label for="specification">Specification:</label><br>
+              <input type="text" id="specification" [(ngModel)]="userProfile.uSpecification" name="uSpecification">
+            </div>
+            
+       
+          <div class="mb-3">
+            <label for="courseType">Course Type:</label><br>
+            <input type="text" id="courseType" [(ngModel)]="userProfile.uCoursetype" name="uCoursetype">
+          </div>
+          <div class="mb-3">
+            <label for="college">College:</label><br>
+            <input type="text" id="college" [(ngModel)]="userProfile.uCollege" name="uCollege">
+          </div>
+       
+          <div class="mb-3">
+            <label for="resume" class="form-label">Resume Upload</label><br>
+            <input type="file" class="form-control" id="resume" name="resume">
+          </div>
+          <div class="mb-3">
+            <label for="photo" class="form-label">Photo Upload</label><br>
+            <input type="file" class="form-control" id="photo" name="photo">
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="btn-div d-flex justify-content-end">
+        <button type="reset" class="btn btn-danger">Cancel</button>&nbsp;&nbsp;
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+
+    </div>
+
+  </mat-card>
+  <br>
+</div>

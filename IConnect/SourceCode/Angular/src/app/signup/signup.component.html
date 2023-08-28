@@ -1,0 +1,51 @@
+<div class="d-flex justify-content-center" style="min-height: 100vh;">
+
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div id="static-column" class="col-md-6"><br><br><br><br><br><br>
+                    <img src="assets\register3.svg" class="img-fluid" alt="LoginPic">
+                </div>
+                <div id="dynamic-column" class="col-md-6">
+                    <br><br><br><br><br><br>
+                    <div class="logo-container" style="justify-content: center; display:flex">
+                        <img src="assets\logoj2.png" alt="Logo" style="height: 60px;"><br> <br>
+                    </div>
+                    <div class="align-items-center justify-content-center d-flex">
+                    <h4 >Register</h4><br>
+                    </div>
+                    <mat-tab-group>
+                        <mat-tab label="Seeker">
+                            <br>
+                            <form [formGroup]="registrationForm" (ngSubmit)="onRegistrationSubmit('seeker')" class="register-form">
+                            <input type="text" formControlName="uFirstname" placeholder="Enter your Firstname" required>
+                            <input type="text" formControlName="uLastname" placeholder="Enter your Lastname" required>
+                            <input type="text" formControlName="uEmail" placeholder="Enter your Email Id" required>
+                            <input type="password" formControlName="uPassword" placeholder="Enter your password" required>
+                            <button type="submit">Register as Seeker</button>
+                          </form>
+                        </mat-tab>
+                        <mat-tab label="Recruiter">
+                            <br>
+                            <form [formGroup]="registrationForm" (ngSubmit)="onRegistrationSubmit('recruiter')" class="register-form">
+                            <input type="text" formControlName="cName" placeholder="Enter your Company Name" required>
+                            <input type="text" formControlName="cEmail" placeholder="Enter your Company Email Id" required>
+                             <input type="number" formControlName="cPhno" placeholder="Enter your Contact Number" required>
+                            <input type="password" formControlName="cPassword" placeholder="Enter your password" required>
+                            <button type="submit">Register as Recruiter</button>
+                          </form>
+                        </mat-tab>
+                      </mat-tab-group>
+
+                    
+                    <div class="align-items-center justify-content-center d-flex">
+                        <p>Already an user, click <a routerLink="/login">here</a></p>
+                        </div>
+                   
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

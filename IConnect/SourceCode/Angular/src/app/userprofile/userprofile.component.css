@@ -1,0 +1,138 @@
+/* Add your custom styles here */
+
+.background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-card {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-3,
+.col-md-5,
+.col-md-4 {
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-div {
+  margin-top: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col-md-5 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-md-4 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
+
+
+.custom-card {
+  /* Your card styles here */
+  padding: 20px; /* Add padding as needed */
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.row {
+  /* Your row styles here */
+  margin: 10px 0; /* Add margin as needed */
+}
+
+.col-md-3,
+.col-md-4,
+.col-md-5 {
+  /* Your column styles here */
+  padding: 10px; /* Add padding as needed */
+}
+
+.mb-3 {
+  /* Margin bottom for each input group */
+  margin-bottom: 15px;
+}
+
+.form-label {
+  /* Your label styles here */
+  font-weight: bold;
+}
+
+.form-control {
+  /* Your input styles here */
+  width: 100%; /* Make inputs expand to fill the available space */
+}
+
+.btn-div {
+  /* Button div styles */
+  margin-top: 20px; /* Add margin as needed */
+  display: flex;
+  justify-content: flex-end;
+}
